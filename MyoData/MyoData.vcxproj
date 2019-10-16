@@ -102,8 +102,8 @@
     </Link>
     <PostBuildEvent>
       <Command>COPY ".\bin\myo32.dll" "$(OutDir)"
-COPY "$(OutDir)MyoData.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\lib"
-COPY "$(OutDir)myo32.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\lib"</Command>
+COPY "$(OutDir)MyoData.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\Library"
+COPY "$(OutDir)myo32.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\Library"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

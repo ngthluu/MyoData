@@ -43,6 +43,18 @@ int* get_emg_data()
 	return p_collector->getEMGData();
 }
 
+float* get_rotation()
+{
+	if (!p_myo) return nullptr;
+	return p_collector->getOrientationData();
+}
+
+float* get_gyro()
+{
+	if (!p_myo) return nullptr;
+	return p_collector->getGyroscopeData();
+}
+
 float* get_accel()
 {
 	if (!p_myo) return nullptr;
