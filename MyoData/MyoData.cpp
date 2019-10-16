@@ -51,8 +51,10 @@ float* get_accel()
 
 void close()
 {
-	delete p_collector;
-	p_collector = nullptr;
+	if (p_collector != nullptr) {
+		delete p_collector;
+		p_collector = nullptr;
+	}
 
 	if (p_hub != nullptr) {
 		delete p_hub;
