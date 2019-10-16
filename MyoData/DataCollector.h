@@ -15,7 +15,7 @@ public:
 	~DataCollector();
 
 	void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg) override;
-	void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel);
+	void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel) override;
 
 	float* getAccel();
 	int* getEMGData();

@@ -98,10 +98,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>.\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>myo32.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>myo32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>COPY ".\bin\myo32.dll" "$(OutDir)</Command>
+      <Command>COPY ".\bin\myo32.dll" "$(OutDir)"
+COPY "$(OutDir)MyoData.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\lib"
+COPY "$(OutDir)myo32.dll" "C:\Users\NguyenLuu\Desktop\Project\KeobuabaoMyo\lib"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

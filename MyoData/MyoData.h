@@ -10,9 +10,10 @@
 // Can help us get data from myo and transfer it to Python program (by dll file)
 
 
-extern "C" MYODATA_API bool myo_init();
+extern "C" MYODATA_API bool init();
 
-extern "C" MYODATA_API void get_emg_data(int*& result);
-extern "C" MYODATA_API void get_accel(float*& result);
+extern "C" MYODATA_API void run(int FPS);
+extern "C" MYODATA_API int* get_emg_data();
+extern "C" MYODATA_API float* get_accel();
 
-extern "C" MYODATA_API void myo_exit();
+extern "C" MYODATA_API void close();
